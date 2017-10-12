@@ -1,0 +1,23 @@
+<%= form_with(model: @content, local: true) do |form| %>
+<table border="0" align="center">
+	<tr>
+		<td colspan="2"><h1> Create Blog</h1></td>
+	</tr>
+	<tr>
+		<td><%= form.label :title %></td>
+		<td><%= form.text_field :title, id: :blog_title %></td>
+	</tr>
+	<tr>
+		<td><%= form.label :description %></td>
+		<td><%= form.text_area :description, id: :blog_description %></td>
+	</tr>
+	<tr>
+		<td><%= form.label :name %></td>
+		<td><%= form.text_field :name, id: :author_name %></td>
+	</tr>
+	<tr>
+		<td colspan="2"><%= form.submit :id => "create_new" %></td>
+	</tr>
+</table>
+<% end %>
+

@@ -1,0 +1,23 @@
+<div align="right"><%= link_to 'New' ,  new_content_path%></div>
+	<table border="0" align="center" width="70%">
+	<tr>
+		<td align="center"><h1>Blog</h1></td>
+	</tr>
+	<% @contents.each do |content| %>
+	<tr align="center">
+		<td><%= content.title %><hr></td>
+	</tr>
+	<tr>
+		<td style="text-indent: 50px"><%= (content.description).truncate(200) %><%= link_to 'Read' , content_path(content.id)%><hr></td>
+	</tr>
+	<tr align="right">
+		<td>Author:<%= content.name %></td>
+	</tr>
+	<tr>
+		<td align="center">******************************************</td>
+	</tr>
+	<tr>
+		<td><br><br></td>
+	</tr>
+	<% end %>
+</table>

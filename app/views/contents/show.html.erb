@@ -1,0 +1,21 @@
+<%= link_to 'Back' ,  contents_path%>
+	<table border="0" align="center" width="70%">
+	<tr>
+		<td align="center"><h1>Blog</h1></td>
+	</tr>
+	<tr align="center">
+		<td><%= @content.title %>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%= link_to 'Delete' ,  content_path(@content.id), :method => 'delete'%><hr></td>
+	</tr>
+	<tr>
+		<td style="text-indent: 50px"><%= @content.description %><hr></td>
+	</tr>
+	<tr align="right">
+		<td>Author:<%= @content.name %></td>
+	</tr>
+	<tr>
+		<td align="center">******************************************</td>
+	</tr>
+	<tr>
+		<td><br></td>
+	</tr>
+</table>
